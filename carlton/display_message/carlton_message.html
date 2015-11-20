@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>Display a message</title>
+		<style type='text/css'>
+			body { 
+				font-family: sans-serif; 
+			}
+			
+			#message { 
+				padding-top: 20px; 
+			}
+		</style> 
+	</head>
+	
+	<body>
+		
+		Click here to see a message: <input type="checkbox" name="switch" id="switch" /><br> 
+		
+		<img src="http://ih1.redbubble.net/image.44341716.7216/sticker,375x360.u3.png" id='message' /> 
+		
+		<script>
+						
+			function displayMessage() { 
+				// set some variables
+				var box = document.getElementById('switch'); 
+				var carlton = document.getElementById('message');
+				
+				box.onclick = function() { 
+					if (box.checked) { 
+						carlton.style.display = 'block'; 
+					} else { 
+						carlton.style.display = 'none'; 
+					}
+				}
+				carlton.style.display = 'none'; 
+			}; 
+			
+			window.onload = function() { 
+				displayMessage(); 
+			}; 
+		</script>
+	</body>
+</html>
