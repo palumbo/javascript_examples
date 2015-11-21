@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>Playing with forms</title>
+		<style type='text/css'>
+			
+			body { 
+				font-family: sans-serif; 
+			}
+			
+			#message { 
+				font-size: 1000%;  
+			}
+			
+			#container { 
+				// border: 1px black solid; 
+				border-collapse: collapse; 
+				margin-top: 200px; 
+				width:800px; 
+				margin: auto; 
+			}
+			
+			
+			</style> 
+	</head>
+	
+	<body>
+		
+		<form> 
+			<input type="text" name="text" id="text" value="" /> 
+		</form>
+		
+		<button type="button" id="translate">Biggify</button>
+		
+		<div id='container'>
+		<h1 id='message'></h1>
+		</div>
+		
+		<script>
+		
+			document.getElementById('translate').onclick = function() { 
+				var string = document.getElementById('text').value; 
+				console.log(string); 
+				document.getElementById('message').innerHTML = string; 
+			}; 
+		</script>
+	</body>
+</html>
