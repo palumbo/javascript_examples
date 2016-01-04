@@ -12,4 +12,9 @@ function changeImage(){
 	}
 }
 
-setInterval(changeImage, 5000); 
+var intervalHandle = setInterval(changeImage, 5000); 
+
+// stops slide show
+myImage.onclick = function(){ 
+	clearInterval(intervalHandle); 
+} 
