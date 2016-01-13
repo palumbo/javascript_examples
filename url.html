@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>Pull a URL</title>
+		<style>
+			body { font-family: sans-serif; }
+			#container { color: red; }
+		</style> 
+	</head>
+	
+	<body>
+		
+		<p>The URL of this page is <span id='container'></span>.</p>
+		
+		<script>
+			// this grabs the current URL of the window
+			var url = window.location.href; 
+			document.getElementById('container').innerHTML = url;
+		</script>
+	</body>
+</html>
